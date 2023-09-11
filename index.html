@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Library</title>
+</head>
+<body>
+  <nav>
+    <button id="add-btn" onclick="modalOpen()">Add<svg id="plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17,13H13V17H11V13H7V11H11V7H13V11H17M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg></button>
+  </nav>
+  <div id="align-container">
+    <dialog id="book-form" close>
+      <form action="">
+        <div id="input-container">
+          <input type="text" placeholder="author" id="author" class="input-item text-input">
+          <input type="text" placeholder="title" id="title" class="input-item text-input">
+          <input type="number" placeholder="number of pages" id="num-pages" class="input-item text-input">
+          <div class="form-box input-item">
+            <label for="isRead">Have you read it?</label>
+            <input type="checkbox" id="isRead">
+          </div>
+        </div>
+        <div id="btn-container">
+          <button onclick="submitButton()">Submit</button>
+        </div>
+      </form>
+    </dialog>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
