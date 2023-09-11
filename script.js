@@ -25,7 +25,7 @@ const submitButton = (event) => {
   const author = document.querySelector("#author").value
   const title = document.querySelector("#title").value
   const numOfPages = document.querySelector("#num-pages").value
-  const isRead = document.querySelector("#isRead").value
+  const isRead = document.querySelector("#isRead").checked
   const newBook = new booksConstructor(author, title, numOfPages, isRead)
   data.push(newBook)
   event.preventDefault()
