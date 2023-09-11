@@ -28,6 +28,7 @@ const submitButton = (event) => {
   const isRead = document.querySelector("#isRead").checked
   const newBook = new booksConstructor(author, title, numOfPages, isRead)
   data.push(newBook)
+  dialog.close()
   event.preventDefault()
 }
 
@@ -46,5 +47,5 @@ dialog.addEventListener("click", e => {
 })
 
 const booksGenerator = () => {
-  
+
 }
