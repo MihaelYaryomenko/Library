@@ -78,8 +78,23 @@ const renderBook = (bookNumber) => {
   numOfPages.innerText = `Number of pages: ${data[bookNumber].pages}`
   author.after(numOfPages)
 
-  const isRead = document.createElement("div")
-  isRead.setAttribute("id", "isRead")
+  const isRead = document.createElement("button")
+  if (data[bookNumber].isRead) {
+    isRead.innerText = "finished"
+  } else {
+    isRead.innerText = "unfinished"
+    isRead.classList.add("red-btn")
+  }
+  numOfPages.after(isRead)
+  isRead.addEventListener("click", () => {
+    if (isRead.innerText === "finished") {
+      isRead.innerText = "unfinished"
+      isRead.classList.add("red-btn")
+      return
+    }
+    isRead.innerText = "finished"
+    isRead.classList.remove("red-btn")
+  })
 
   const deleteButton = document.createElement("button")
   deleteButton.info = bookNumber // future me, I so sorry for this. I had no idea how to do this :(
